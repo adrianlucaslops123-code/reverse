@@ -15,7 +15,9 @@ Prompt mestre autônomo para usar em outra sessão de IA ou em outro ambiente de
 3. `CDC_DESIGN_LIBRARY_INDEX.md` + pasta `CDC_DESIGN_LIBRARY/`: 42 fichas técnicas.
 4. `ASSETS_INVENTORY.md` e `TECHNICAL_DEPENDENCIES.md`.
 5. `REFERENCIAS_VISUAIS/`: capturas do site publicado em 3 nov. 2026.
-6. **O mais importante para o Modo A:** o código-fonte original, `https://github.com/adrianlucaslops123-code/landing-page-cdc`, commit `65c37e7`, com a pasta `public/` (logo, fotos, PDFs).
+6. **O mais importante para os Modos A e C:** o código-fonte original, `https://github.com/adrianlucaslops123-code/landing-page-cdc`, commit `65c37e7`, com a pasta `public/` (logo, fotos, PDFs).
+
+**Se você recebeu o ZIP `CDC_PACOTE_COMPLETO_<data>.zip`, todos os anexos já estão nele:** a documentação em `CDC_SITE_BACKUP/`, o código-fonte completo em `landing-page-cdc/`, o pedido preenchido pelo usuário (feito a partir de `MODELO_DE_PEDIDO.txt`) e o `HISTORICO_DE_ALTERACOES.md`. Comece pelo `LEIA-ME_PRIMEIRO.md` da raiz do ZIP.
 
 ---
 
@@ -33,7 +35,7 @@ Antes de escrever qualquer código:
 
 ### 1. Fontes de verdade (ordem de prioridade)
 
-1. **Código-fonte original** (`landing-page-cdc`, commit `65c37e7`), se você tiver acesso.
+1. **Código-fonte original** (pasta `landing-page-cdc/` do ZIP, ou o repositório `landing-page-cdc`, commit `65c37e7` ou o mais recente indicado no `HISTORICO_DE_ALTERACOES.md`), se você tiver acesso.
 2. `CDC_SITE_MASTER_SPECIFICATION.md`.
 3. `CDC_DESIGN_SYSTEM.md`.
 4. As fichas da `CDC_DESIGN_LIBRARY/` (cada uma tem valores, código e como adaptar).
@@ -160,7 +162,7 @@ O site publicado tem cinco comportamentos que parecem não intencionais (`CDC_DE
 4. o contador da abertura pode parar em 090;
 5. a rota da seção Estrutura anima mesmo com movimento reduzido.
 
-Sem resposta, siga a **intenção** e registre no relatório.
+Sem resposta: no **modo A**, siga a **intenção** e registre no relatório. No **modo C**, **não mexa** em nenhum deles (só o que foi pedido muda).
 
 #### 4.11 Validação
 
@@ -213,7 +215,10 @@ O cursor da CDC é **ponto (6 px) + anel (38 px)** com estados. **Não há** "po
 2. Localize o arquivo e o bloco na especificação mestre (§13) e na ficha correspondente.
 3. Altere **só** esse bloco. Não mexa em tokens globais, na ordem de inicialização nem em outras seções, a não ser que o pedido exija. Se exigir, avise antes.
 4. Mantenha as saídas de toque e de movimento reduzido.
-5. Depois da mudança, rode o checklist da §18 nas partes afetadas e informe o que mudou, com valores antigos → novos.
+5. Não corrija os efeitos colaterais da §4.10, a não ser que o pedido diga para corrigir.
+6. Trabalhe sobre os arquivos de `landing-page-cdc/` (ZIP ou repositório). Depois da mudança, rode `npm ci` e `npm run build` (Node 22.13+) e confirme que não há erro. Se puder abrir o site, rode o checklist da especificação mestre §18 nas partes afetadas.
+7. Se a mudança alterar algo que está documentado (texto da §8 da especificação, token do Design System, parâmetro de uma ficha), **atualize o documento** no mesmo trabalho e registre a mudança no `HISTORICO_DE_ALTERACOES.md` (data, pedido, arquivos, valores antigos → novos).
+8. Informe o que mudou, com valores antigos → novos.
 
 ### 7. Anti-padrões proibidos
 
@@ -230,6 +235,11 @@ O cursor da CDC é **ponto (6 px) + anel (38 px)** com estados. **Não há** "po
 1. **Plano** (antes do código): modo, fichas usadas, recursos necessários, decisões pendentes.
 2. **Implementação** em passos pequenos e verificáveis, na ordem: tokens e fontes → estrutura → conteúdo → interações básicas → cenas e *motion* → responsividade → movimento reduzido.
 3. **Relatório final**: o que foi feito; o que seguiu o original com valores EXATOS; o que foi adaptado (antes → depois); decisões tomadas sobre os efeitos colaterais; o que não pôde ser reproduzido e por quê; resultado do checklist.
+4. **Entrega**, conforme o campo "COMO QUERO RECEBER" do pedido:
+   - **ZIP novo** com a **mesma estrutura** do recebido (`LEIA-ME_PRIMEIRO.md`, `MODELO_DE_PEDIDO.txt`, `HISTORICO_DE_ALTERACOES.md`, `VERSAO.txt`, `MANIFESTO_SHA256.txt`, `gerar_pacote_zip.py`, `CDC_SITE_BACKUP/`, `landing-page-cdc/` sem `node_modules/` e sem `dist/`), com nome `CDC_PACOTE_COMPLETO_<AAAA-MM-DD>.zip`. O jeito mais simples: `python3 gerar_pacote_zip.py` na raiz do pacote descompactado;
+   - ou só os arquivos alterados, com os caminhos;
+   - ou um *commit* num **branch novo** do repositório indicado.
+   - **Nunca** publique na Vercel nem envie para o branch principal sem autorização explícita no pedido.
 
 ### 9. Apêndice: parâmetros essenciais (consulta rápida)
 

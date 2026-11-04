@@ -170,6 +170,7 @@ Cuidados técnicos em qualquer hospedagem:
 
 ## 12. Usar a documentação em projetos futuros
 
+- **Jeito mais simples:** guarde o ZIP `CDC_PACOTE_COMPLETO_<data>.zip`, que tem esta documentação **e** o código do site. Numa conversa nova, anexe o ZIP, preencha o `MODELO_DE_PEDIDO.txt` (na raiz do ZIP) com as alterações e cole o texto. Instruções no `LEIA-ME_PRIMEIRO.md` da raiz do ZIP. Para refazer o ZIP: `gerar_pacote_zip.py` (raiz do repositório `reverse` ou do ZIP).
 - **Reconstruir o site:** entregue à ferramenta o `CDC_SITE_RECONSTRUCTION_PROMPT.md` com os anexos que ele lista, e peça o **modo A**.
 - **Reutilizar uma experiência** (ex.: o cursor com "ABRIR" ou o cordão de solda) com outra identidade: mesmo prompt, **modo B**, citando os IDs das fichas (ex.: "use CUR-01, CUR-02 e ROL-01 com a paleta do projeto X").
 - **Alterar o site da CDC** sem perder a identidade: **modo C**.

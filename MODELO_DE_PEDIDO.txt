@@ -1,0 +1,87 @@
+=====================================================================
+MODELO DE PEDIDO · PACOTE DO SITE CDC
+---------------------------------------------------------------------
+Como usar: preencha os campos entre [colchetes], marque um X nas
+opções, apague o que não usar e cole TODO este texto na conversa,
+junto com o arquivo CDC_PACOTE_COMPLETO_<data>.zip.
+=====================================================================
+
+Anexei o ZIP do pacote do site da CDC Capacitação em Qualidade.
+Antes de qualquer coisa, leia o arquivo LEIA-ME_PRIMEIRO.md da raiz
+do ZIP e siga o prompt mestre que está em
+CDC_SITE_BACKUP/CDC_SITE_RECONSTRUCTION_PROMPT.md.
+Faça somente o que está pedido abaixo.
+
+---------------------------------------------------------------------
+1. MODO (marque um)
+---------------------------------------------------------------------
+[ ] A - Reconstruir o site da CDC igual ao original
+[ ] B - Usar experiências da CDC num projeto novo, com outra identidade
+[ ] C - Alterar o site da CDC sem perder a identidade
+
+---------------------------------------------------------------------
+2. ALTERAÇÕES QUE EU QUERO
+(uma por linha, o mais específico possível: seção, texto atual,
+texto novo, valor atual, valor novo)
+---------------------------------------------------------------------
+1. [ex.: Seção Treinamentos: mudar o preço do Curso Inspetor de
+   Soldagem Nível 1 de R$ 2.200 para R$ 2.400]
+2. [ex.: Depoimentos: acrescentar um 4º depoimento.
+   Texto: "..." · Nome: ... · Status: Aprovado no exame]
+3. [ex.: Trocar a foto 05 da fita de fotos pelo arquivo anexo
+   nova-foto.jpg, legenda "..."]
+4. [...]
+
+Arquivos novos que estou anexando (fotos, PDFs, logo etc.):
+- [nome do arquivo] → [para que serve / onde entra]
+
+---------------------------------------------------------------------
+3. O QUE NÃO PODE MUDAR
+(além do que o prompt mestre já protege: identidade, textos,
+animações e tudo o que não foi pedido)
+---------------------------------------------------------------------
+- [ex.: as cores e as animações do hero]
+- [...]
+
+---------------------------------------------------------------------
+4. SÓ PARA O MODO B (projeto novo)
+---------------------------------------------------------------------
+Nome do projeto: [...]
+Do que se trata (público, objetivo): [...]
+Cores da marca (HEX): [...]
+Fontes: [...]
+Logo: [anexe um PNG branco sobre fundo transparente]
+Experiências da biblioteca que quero usar (IDs do arquivo
+CDC_SITE_BACKUP/CDC_DESIGN_LIBRARY_INDEX.md):
+  [ex.: CUR-01 cursor, CUR-02 círculo "ABRIR", ROL-01 cordão de solda]
+Experiências que NÃO quero: [...]
+Caráter: [ ] minimalista  [ ] expressivo  [ ] misto
+
+---------------------------------------------------------------------
+5. EFEITOS COLATERAIS DO SITE ORIGINAL (modos A e C)
+Se deixar em branco: no modo C nada disso muda; no modo A a IA
+segue a intenção do código e registra a decisão.
+---------------------------------------------------------------------
+1. Anel do cursor não encolhe ao clicar:        [ ] manter  [ ] corrigir
+2. Botão do WhatsApp deixa de se esconder no
+   topo depois do primeiro "hover":             [ ] manter  [ ] corrigir
+3. Texto "Capacitação em qualidade" e "Role"
+   somem depois de descer e voltar ao topo:     [ ] manter  [ ] corrigir
+4. Contador da abertura pode parar em 090:      [ ] manter  [ ] corrigir
+5. Rota da seção Estrutura anima mesmo com
+   movimento reduzido:                          [ ] manter  [ ] corrigir
+
+---------------------------------------------------------------------
+6. COMO QUERO RECEBER (marque um ou mais)
+---------------------------------------------------------------------
+[ ] Um ZIP novo do pacote, com o código e a documentação atualizados
+    (recomendado: guardo no computador e uso na próxima vez)
+[ ] Só os arquivos alterados
+[ ] Commit num branch novo do GitHub, sem publicar.
+    Repositório: [adrianlucaslops123-code/landing-page-cdc]
+[ ] Publicar na Vercel (marque só se tiver certeza)
+
+---------------------------------------------------------------------
+7. OBSERVAÇÕES
+---------------------------------------------------------------------
+[...]
